@@ -2,13 +2,14 @@ package main
 
 import "fmt"
 
-func test() {
+func test(p1 int, p2 int) (int, int) {
 	const a int = 10
 	const (
 		aa = 10
 		bb = 20
 	)
-	fmt.Println("a = ", a, "aa = ", aa, "bb = ", bb)
+	fmt.Println("a=", a, "aa=", aa, "bb=", bb)
+	return aa, bb
 }
 
 // func test() {
@@ -16,19 +17,16 @@ func test() {
 // 	var b int = 100
 // 	var c = 100
 // 	d := 100
-
 // 	var xx, yy int = 100, 200
 // 	var kk, ll = 100, "AceId"
 // 	var (
 // 		vv int  = 100
 // 		jj bool = true
 // 	)
-
 // 	fmt.Println("a=", a)
 // 	fmt.Println("b=", b)
 // 	fmt.Println("c=", c)
 // 	fmt.Println("d=", d)
-
 // 	fmt.Println("xx=", xx)
 // 	fmt.Println("yy=", yy)
 // 	fmt.Println("kk=", kk)
@@ -39,5 +37,5 @@ func test() {
 
 func main() {
 	fmt.Println("Hello go.")
-	test()
+	var aaa, bbb int = test(10, 20)
 }
