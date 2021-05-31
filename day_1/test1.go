@@ -37,5 +37,5 @@ func test(p1 int, p2 int) (int, int) {
 
 func main() {
 	fmt.Println("Hello go.")
-	var aaa, bbb int = test(10, 20)
+	// var aaa, bbb int = test(10, 20)
 }
