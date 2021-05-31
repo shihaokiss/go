@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gobase/day_2_import/lib1"
+	_ "time"  //不使用
+	mylib1 "gobase/day_2_import/lib1"  //重命名
 )
 
 func init() {
@@ -11,5 +12,5 @@ func init() {
 
 func main() {
 	fmt.Println("main.main()...")
-	lib1.Test1()
+	mylib1.Test1()
 }
