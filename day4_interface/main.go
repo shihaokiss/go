@@ -37,9 +37,16 @@ func Show(animal AnimalIF) {
 }
 
 func main() {
-	cat := Cat{"write"}
-	dog := Dog{"yellow"}
+	// cat := Cat{"write"}
+	// dog := Dog{"yellow"}
 
-	Show(&cat)
-	Show(&dog)
+	// Show(&cat)
+	// Show(&dog)
+
+	cat := &Cat{"write"}
+	dog := &Dog{"yellow"}
+
+	cat.Eat()
+	dog.Eat()
+	
 }
