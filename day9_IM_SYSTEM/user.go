@@ -96,6 +96,22 @@ func (this *User) DoMessage(msg string) {
 			this.SendMsg("rename success! user=" + newName)
 		}
 
+	} else if len(msg) > 4 && msg[:3] == "to|" {
+        //消息格式 to|name|msg
+		userName := strings.Split(msg, "|")[1]
+		remoteUser, ok := this.Server.OnlineUser[userName]
+		if !ok {
+            this.SendMsg("this user not exist!")
+			return
+		}
+
+		msg := strings.Split(msg, "|")[2]
+		if msg == "" {
+			this.SendMsg("can not send empty msg!")
+			return
+		}
+		
+		remoteUser.SendMsg("[" + this.Name + "] said to you: " + msg)
 	} else {
 		this.Server.BroadCast(this, msg)
 	}

@@ -108,10 +108,12 @@ func (this *Server) DoHandle(conn net.Conn) {
 		select {
 		case <-isLive:
 			//用户活跃，检测time.After的时候会归0触发器
-		case <-time.After(time.Second * 10):
+		case <-time.After(time.Second * 60):
 			//超时了，需要踢出用户
 			user.SendMsg("timeout!")
 			user.Clean()
+			//清理完成不用走用户下线的逻辑，直接退出DoHandle
+			return
 		}
 	}
 }
