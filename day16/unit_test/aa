@@ -1,0 +1,6 @@
+mode: set
+gobase/day16/unit_test/strings_split.go:9.45,12.17 3 1
+gobase/day16/unit_test/strings_split.go:17.2,18.19 2 1
+gobase/day16/unit_test/strings_split.go:21.2,21.12 1 1
+gobase/day16/unit_test/strings_split.go:12.17,16.3 3 1
+gobase/day16/unit_test/strings_split.go:18.19,20.3 1 0
