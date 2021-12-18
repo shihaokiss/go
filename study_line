@@ -1,0 +1,8 @@
+1. nginx
+2. uwsgi + django + python
+3. gin + go
+4. thrift + epms
+5. db mysql
+6. docker + k8s
+7. CICD
+8. 计算机基础 + 网络 + 数据结构
